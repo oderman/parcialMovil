@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'historial.dart';
+import 'histo.dart';
 
 void main() {
   runApp(ExParcial());
@@ -34,16 +34,16 @@ class _ParcialFullState extends State<ParcialFull> {
 
   void buttonPressed(String buttonText, cant, double tarifa) {
     setState(() {
-      double resultado;
+      // double resultado;
       if (buttonText == 'USD(\$)') {
         tarifa = 3862.0;
-        resultado = tarifa * cant;
+        //resultado = tarifa * cant;
       } else if (buttonText == 'Euro(€)') {
         tarifa = 4535.0;
-        resultado = tarifa * cant;
+        //resultado = tarifa * cant;
       } else {
         tarifa = 36.64;
-        resultado = tarifa * cant;
+        //resultado = tarifa * cant;
       }
     });
   }
@@ -105,7 +105,7 @@ class _ParcialFullState extends State<ParcialFull> {
               ),
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Valor a Cambiar (Pesos Colombianos)',
+                  labelText: 'Valor (COP)',
                 ),
                 controller: inputController,
               ),
@@ -123,12 +123,12 @@ class _ParcialFullState extends State<ParcialFull> {
                 padding: EdgeInsets.fromLTRB(15, 10, 0, 0),
                 child: Text('Moneda: '),
               ),
-              Text(),
+              Text(""),
               Container(
                 padding: EdgeInsets.fromLTRB(15, 10, 0, 0),
-                child: Text('Equivalencia: '),
+                child: Text('Equivale: '),
               ),
-              Text(),
+              Text(""),
             ],
           ),
           HistorialPage(),

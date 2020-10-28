@@ -3,7 +3,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 
-import 'newhistory.dart';
+import 'agregarhisto.dart';
 
 class HistorialPage extends StatefulWidget {
   @override
@@ -11,15 +11,6 @@ class HistorialPage extends StatefulWidget {
 }
 
 class _HistorialPageState extends State<HistorialPage> {
-  final List<History> history = [
-    History(
-      id: null,
-      text: null,
-      amount: null,
-      result: null,
-    ),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,15 +20,5 @@ class _HistorialPageState extends State<HistorialPage> {
     );
   }
 
-  void _addHistory(String title, double amount) {
-    final newH = History(
-      id: null,
-      title: title,
-      amount: amount,
-    );
-
-    setState(() {
-      history.add(newH);
-    });
-  }
+  void _addHistory(String title, double amount) {}
 }
